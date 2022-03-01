@@ -25,5 +25,4 @@ function checkLength(str, max) {
     return true;
   }
 }
-
 checkLength(60);
