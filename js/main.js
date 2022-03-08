@@ -13,7 +13,7 @@ checkLength(8,300);
 // переменная description - описание фотографии строка
 // переменная likes - рандом от 15 до 200 число
 // переменная comments - список коментариев (рандом из списка) строка = message =>Всё отлично!
-
+const NUMBER_OF_IMAGES_DISPLAYED = 25;
 const dataGeneration = () => {
   const getRandomPositiveInteger = (a, b) => {
     const lower = Math.ceil(Math.min(Math.abs(a), Math.abs(b)));
@@ -179,3 +179,6 @@ const dataGeneration = () => {
   };
 };
 dataGeneration();
+
+const MORE_IMAGE = Array.from({length: NUMBER_OF_IMAGES_DISPLAYED},dataGeneration);
+MORE_IMAGE();
