@@ -55,14 +55,7 @@ const descriptions = [
 ];
 const randomDescriptionIndex = getRandomInteger(0, descriptions.length - 1);
 const getComments = () => {
-  const randomUrlIndex = getRandomInteger(0, URLS.length - 1);
-  if (URLS.indexOf(randomUrlIndex) !== -1) {
-    URLS.push(randomUrlIndex);
-  }
   const randomAvatarIndex = getRandomInteger(0, avatars.length - 1);
-  if (avatars.indexOf(randomAvatarIndex) !== -1) {
-    avatars.push(randomAvatarIndex);
-  }
   const randomMessageIndex = getRandomInteger(0, messages.length - 1);
   if (messages.indexOf(randomAvatarIndex) !== -1) {
     messages.push(randomMessageIndex);
@@ -72,8 +65,8 @@ const getComments = () => {
     names.push(randomNameIndex);
   }
   return {
-    id: IDS[randomUrlIndex],
-    url: URLS[randomUrlIndex],
+    id: IDS,
+    url: URLS,
     description: descriptions[randomDescriptionIndex],
     likes: LIKES,
     comments: messages,
