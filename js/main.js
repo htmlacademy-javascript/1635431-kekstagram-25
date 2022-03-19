@@ -75,4 +75,5 @@ const getComments = () => {
 getComments();
 
 const IMAGES = Array.from({length: NUMBER_OF_IMAGES_DISPLAYED}, getComments);
-console.log(IMAGES);
+
+IMAGES();
