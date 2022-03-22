@@ -62,10 +62,10 @@ const createComment = (_, index) => {
 const createImage = (_, index) =>
   ({
     id: index + 1,
-    url: `photos/${ getRandomInteger(1,25)}.jpg`,
+    url: `photos/${ index + 1}.jpg`,
     description: descriptions[getRandomInteger(0, descriptions.length - 1)],
     likes: getRandomInteger(15 , 200),
-    comments: Array.from({length: getRandomInteger}, createComment),
+    comments: Array.from({length: getRandomInteger(0, 9)}, createComment),
   });
 
 const images = Array.from({length: IMAGES_COUNT}, createImage);
