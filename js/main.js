@@ -1,6 +1,6 @@
 import './js_modules/utils.js';
 import './js_modules/data.js';
-import {createImage} from './js_modules/add-comments.js';
+import {createImage} from './js_modules/create-сomment.js';
 
 const IMAGES_COUNT = 25;
 
