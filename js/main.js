@@ -1,8 +1,11 @@
-import './js_modules/util.js';
+import './js_modules/utils.js';
 import './js_modules/data.js';
-import './js_modules/applyingf-fects.js';
-import './js_modules/add-hash-tags.js';
-import {images} from './js_modules/download-image.js';
+import {createImage} from './js_modules/add-comments.js';
 
+const IMAGES_COUNT = 25;
+
+export  {IMAGES_COUNT};
+
+const images = Array.from({length: IMAGES_COUNT}, createImage);
 // eslint-disable-next-line
 console.log(images);

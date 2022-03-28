@@ -1,5 +1,5 @@
 import {createComment} from './data.js';
-import {getRandomInteger , IMAGES_COUNT} from './util.js';
+import {getRandomInteger ,} from './utils.js';
 
 const descriptions = [
   'Нарисовааные на заборе деревья',
@@ -38,6 +38,4 @@ const createImage = (_, index) =>
     comments: Array.from({length: getRandomInteger(0, 9)}, createComment),
   });
 
-const images = Array.from({length: IMAGES_COUNT}, createImage);
-
-export  {images};
+export  {createImage};
