@@ -1,5 +1,5 @@
 import {createComment} from './data.js';
-import {getRandomInteger ,} from './utils.js';
+import {getRandomInteger} from './utils.js';
 
 const descriptions = [
   'Нарисовааные на заборе деревья',
