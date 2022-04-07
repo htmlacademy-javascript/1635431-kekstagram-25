@@ -1,29 +1,18 @@
-import {createComment} from './data.js';
-import {getRandomInteger} from './utils.js';
+const picturesContainer = document.querySelector('.pictures');
+const template = document.getElementById('picture').content;
 
-const pictureContainer = document.getElementById('picture');
-const pictureListFragment = document.createDocumentFragment();
+function renderPictures (pictures) {
+  const fragment = document.createDocumentFragment();
 
-const pictureImage = {
-  scr: 'picture.imageUrl',
-  comments: createComment,
-  likes: getRandomInteger(15 , 200),
-};
-const userPictures = [
-  'src',
-  'comments',
-  'likes',
-];
+  pictures.forEach((picture) => {
+    const photoElement = template.cloneNode(true);
+    photoElement.querySelector('.picture__img').src = picture.url;
+    photoElement.querySelector('.picture__lices').textContent = picture.likes;
+    photoElement.querySelector('.picture__coments').textContent = picture.comments.length;
+    fragment.appendChild(photoElement);
+  });
 
-userPictures.forEach((userPicture) => {
-  const pictureListItem = document.createElement('div');
+  picturesContainer.append(fragment);
+}
 
-  pictureListItem.classList.add('picture');
-  pictureListItem.classList.add(`picture__${userPicture}`);
-  pictureListItem.textContent = pictureImage[userPicture];
-
-  pictureContainer.append(pictureListItem);
-});
-
-pictureContainer.innerHTML = '';
-pictureContainer.append(pictureListFragment);
+export {renderPictures};
