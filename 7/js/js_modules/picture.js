@@ -7,8 +7,8 @@ function renderPictures (pictures) {
   pictures.forEach((picture) => {
     const photoElement = template.cloneNode(true);
     photoElement.querySelector('.picture__img').src = picture.url;
-    photoElement.querySelector('.picture__lices').textContent = picture.likes;
-    photoElement.querySelector('.picture__coments').textContent = picture.comments.length;
+    photoElement.querySelector('.picture__likes').textContent = picture.likes;
+    photoElement.querySelector('.picture__comments').textContent = picture.comments.length;
     fragment.appendChild(photoElement);
   });
 
