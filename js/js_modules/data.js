@@ -28,4 +28,5 @@ const createComment = (_, index) => {
     name: names[randomNamesIndex],
   };
 };
+
 export {createComment};
