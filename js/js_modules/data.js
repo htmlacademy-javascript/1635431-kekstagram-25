@@ -29,4 +29,15 @@ const createComment = (_, index) => {
   };
 };
 
+
+// const messages = (evt) => {
+//   if (140 < document.getElementById('.social__text').value.length) {
+//     messeges(true);
+//   } else {
+//     messeges(false);
+//   }
+// };
+
+// messages();
+
 export {createComment};

@@ -2,6 +2,8 @@ import './js_modules/utils.js';
 import './js_modules/data.js';
 import {createImage} from './js_modules/create-image.js';
 import {renderPictures} from './js_modules/picture.js';
+import './js_modules/user-content.js';
+import './js_modules/user-form.js';
 
 const IMAGES_COUNT = 25;
 
