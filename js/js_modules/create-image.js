@@ -38,4 +38,8 @@ const createImage = (_, index) =>
     comments: Array.from({length: getRandomInteger(0, 9)}, createComment),
   });
 
+if(createComment.length <=0 || createComment.length >= 140 || !/[0-9]/.test(createComment) || !/[a-zA-Z]/.test(createComment)){
+  // show error
+}
+
 export  {createImage};
